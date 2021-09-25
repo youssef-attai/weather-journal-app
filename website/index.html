@@ -9,11 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <h1>weather journal app</h1>
-            <input type="number" name="zip" id="zip" placeholder="enter zip code here">
-            <textarea name="feelings" id="feelings" cols="30" rows="10" placeholder="how do you feel today?"></textarea>
-            <button id="generate">generate</button>
+        <div>
+            <div class="card form">
+                <h1>weather journal app</h1>
+                <input type="number" name="zip" id="zip" placeholder="enter zip code here">
+                <textarea name="feelings" id="feelings" cols="30" rows="10" placeholder="how do you feel today?"></textarea>
+                <button id="generate">generate</button>
+            </div>
+            <div class="card result display-none">
+                <h1>weather journal app</h1>
+                <div class="row large">
+                    <span class="bold">Weather: </span><span id="weather"></span>
+                </div>
+                <div class="row">
+                    <span class="bold">City: </span><span id="city"></span>
+                </div>
+                <div class="row">
+                    <span class="bold">Date: </span><span id="date"></span>
+                </div>
+                <div class="row">
+                    <span class="bold">Temperature: </span><span id="temp"></span>
+                </div>
+                <div class="row">
+                    <span class="bold">Humidity: </span><span id="humidity"></span>
+                </div>
+                <div class="row">
+                    <span class="bold">Feeling: </span><span id="content"></span>
+                </div>
+                <button id="back">Back</button>
+            </div>
         </div>
     </div>
     <script src="./app.js"></script>

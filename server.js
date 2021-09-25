@@ -2,27 +2,25 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
-
 const cors = require("cors");
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(cors());
 
 app.use(express.static("website"));
 
-const port = 1234
+const port = 8000
 
-const projectdata = {};
-
-app.get("/result", (req, res)=>{
-    console.log(projectdata);
-    res.send(projectdata);
-});
+let projectdata = {};
 
 app.post("/weather", (req, res)=>{
-    console.log(req.body);
     projectdata = req.body;
 });
+
+app.get('/result', (req, res)=>{
+    res.send(projectdata)
+})
 
 app.listen(port, ()=>{
     console.log(`Listening - localhost:${port}`);

@@ -32,8 +32,7 @@ h1 {
 .card {
     background-color: #fff;
     padding: 20px;
-    width: 70%;
-    height: 60%;
+    height: 550px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -41,24 +40,48 @@ h1 {
     min-height: 300px;
 }
 
-#zip, #feelings, #generate {
+textarea {
+    resize: none;
+}
+
+#zip, 
+#feelings, 
+button {
     border: 0;
-    background-color: #ddf;
+    background-color: #eef;
     border-radius: 20px;
     padding: 20px;
     margin: 10px;
 }
 
-#zip::placeholder, #feelings::placeholder {
-    color: #336;
+#zip::placeholder,
+#feelings::placeholder {
+    color: #115;
 }
 
-#generate {
+button {
     transition: transform 0.5s;
 }
 
-#generate:hover {
+button:hover {
     background-color: #cce;
     cursor: pointer;
     transform: translateY(5px);
+}
+
+.display-none {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.large {
+    font-size: 1.4rem;
 }
