@@ -18,4 +18,5 @@ Youssef Atta'i
 
 ## Credits
 [Fetch API - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
 [Convert a Unix timestamp to time in JavaScript | StackOverflow answer](https://stackoverflow.com/a/50255425)
