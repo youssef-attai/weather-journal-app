@@ -32,6 +32,7 @@ const postData = async (url="", data={}) => {
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
+                'Access-Control-Allow-Headers': "*"
             },
             body: JSON.stringify(data)
         });
@@ -46,7 +47,7 @@ const postData = async (url="", data={}) => {
 }
 
 const updatePage = async () => {
-    const res = await fetch("http://localhost:8000/result")
+    const res = await fetch("/result")
 
     try {
         const data = await res.json()
@@ -79,7 +80,7 @@ function toggleDisplayCards() {
 generateButton.addEventListener("click", ()=>{
     getWeatherData(zipInput.value, API_KEY)
     .then(data=>postData(
-        "http://localhost:8000/weather",
+        "/weather",
          {...data, feeling: feelingsTextArea.value}))
     .then(updatePage())
 });
