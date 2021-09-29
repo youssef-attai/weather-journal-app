@@ -12,10 +12,15 @@ const resultHumidityDiv = document.getElementById("humidity")
 const resultWeatherDiv = document.getElementById("weather")
 const resultContentDiv = document.getElementById("content")
 
-const API_KEY = "cb0a2c1ecfb0396459240d7ad5a432dd";
+const API_KEY = "cb0a2c1ecfb0396459240d7ad5a432dd&units=metric";
+const URL = "https://api.openweathermap.org/data/2.5/weather?"
 
-const getWeatherData = async (zipCode, apiKey) => {
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`)
+const getWeatherData = async (url, zipCode, apiKey) => {
+    zipCode = `zip=${zipCode}&`
+    apiKey = `appid=${apiKey}`
+    query = url+zipCode+apiKey;
+    console.log(query);
+    const res = await fetch(query)
 
     try {
         return await res.json();
@@ -52,12 +57,16 @@ const updatePage = async () => {
     try {
         const data = await res.json()
 
+        zipInput.disabled = false;
+        feelingsTextArea.disabled = false;
+        generateButton.disabled = false;
+
         console.log(data);
 
         const dt = new Date(data.dt * 1000)
 
         resultDateDiv.innerHTML = `${dt.toDateString()}`
-        resultTempDiv.innerHTML = `${(Number(data.main.temp)-273.15).toFixed(2)}°C`
+        resultTempDiv.innerHTML = `${(Number(data.main.temp)).toFixed(2)}°C`
 
         resultCityDiv.innerHTML = data.name
         resultHumidityDiv.innerHTML = data.main.humidity + "%"
@@ -78,11 +87,15 @@ function toggleDisplayCards() {
 
 
 generateButton.addEventListener("click", ()=>{
-    getWeatherData(zipInput.value, API_KEY)
+    
+    zipInput.disabled = true;
+    feelingsTextArea.disabled = true;
+    generateButton.disabled = true;
+
+    getWeatherData(URL, zipInput.value, API_KEY)
     .then(data=>postData(
-        "/weather",
-         {...data, feeling: feelingsTextArea.value}))
-    .then(updatePage())
+    "/weather",
+    {...data, feeling: feelingsTextArea.value}).then(updatePage()))
 });
 
 backButton.addEventListener("click", toggleDisplayCards)
