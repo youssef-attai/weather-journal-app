@@ -21,4 +21,4 @@ Youssef Atta'i
 
 [Convert a Unix timestamp to time in JavaScript | StackOverflow answer](https://stackoverflow.com/a/50255425)
 
-Special thanks to the Udacity's reviewer who reviewed my second submit, I had this weird "off by one" fetch error and he/she helped me understand the reason behind it and solve it.
+Special thanks to the Udacity's reviewer who reviewed my second submit, I had this weird "off by one" fetch error and they helped me understand the reason behind it and solve it.
