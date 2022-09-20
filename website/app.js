@@ -21,6 +21,8 @@ const getWeatherData = async (url, zipCode, apiKey) => {
     query = url+zipCode+apiKey;
     console.log(query);
     const res = await fetch(query)
+    if (res.status == 404) 
+        alert("Invalid zip code")
 
     try {
         return await res.json();
