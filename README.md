@@ -7,6 +7,15 @@ Basically, it is a small app that queries OpenWeatherMap's API using the key the
 
 This can be done in many ways, however, I sticked to the classic method followed by Udacity's course.
 
+## How to use
+
+Open a terminal window, and paste the following in order:
+
+1. `git clone https://github.com/youssef-attai/weather-journal-app.git`
+2. `cd weather-journal-app`
+3. `npm install`
+4. `npm run start`
+
 ## Technologies used
 - HTML5
 - CSS3
