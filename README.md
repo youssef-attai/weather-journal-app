@@ -1,4 +1,4 @@
-# Weather Journal App Project
+# Weather Journal App
 
 ## Project description
 The main goal of this project is to implement a server-side and client-side app using Node and Express.
