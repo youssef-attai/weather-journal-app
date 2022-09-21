@@ -3,7 +3,7 @@
 ## Project description
 The main goal of this project is to implement a server-side and client-side app using Node and Express.
 
-Basically, it is a small app that queries OpenWeatherMap's API using the key they provide, and returns weather data.
+Basically, it is a small app that queries [OpenWeatherMap](https://openweathermap.org/)'s API using the key they provide, and returns weather data.
 
 This can be done in many ways, however, I sticked to the classic method followed by Udacity's course.
 
