@@ -54,7 +54,7 @@ const postData = async (url="", data={}) => {
 }
 
 const updatePage = async () => {
-    const res = await fetch("/result")
+    const res = await fetch("http://127.0.0.1:8000/result")
 
     try {
         const data = await res.json()
@@ -96,7 +96,7 @@ generateButton.addEventListener("click", ()=>{
 
     getWeatherData(URL, zipInput.value, API_KEY)
     .then(data=>postData(
-    "/weather",
+    "http://127.0.0.1:8000/weather",
     {...data, feeling: feelingsTextArea.value}).then(updatePage()))
 });
 
