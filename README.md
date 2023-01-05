@@ -13,7 +13,7 @@ npm install
 npm run start
 ```
 
-
+Now you can open [/website/index.html](/website/index.html) in a web browser and give it a try.
 
 ## Credits
 [Fetch API - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
