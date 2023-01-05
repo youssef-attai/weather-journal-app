@@ -20,4 +20,4 @@ Now you can open [/website/index.html](/website/index.html) in a web browser and
 
 [Convert a Unix timestamp to time in JavaScript | StackOverflow answer](https://stackoverflow.com/a/50255425)
 
-Special thanks to the reviewer from Udacity who reviewed my second submition, I had this weird fetch error and they helped me understand the reason behind it and solve it.
+**Special thanks** to the reviewer from Udacity who reviewed my second submition.
