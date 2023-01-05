@@ -6,10 +6,14 @@ This small app queries [OpenWeatherMap](https://openweathermap.org/)'s API using
 
 Open a terminal window, and paste the following in order:
 
-1. `git clone https://github.com/youssef-attai/weather-journal-app.git`
-2. `cd weather-journal-app`
-3. `npm install`
-4. `npm run start`
+```
+git clone https://github.com/youssef-attai/weather-journal-app.git
+cd weather-journal-app
+npm install
+npm run start
+```
+
+
 
 ## Credits
 [Fetch API - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
