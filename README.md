@@ -20,4 +20,4 @@ Now you can open [/website/index.html](/website/index.html) in a web browser and
 
 [Convert a Unix timestamp to time in JavaScript | StackOverflow answer](https://stackoverflow.com/a/50255425)
 
-**Special thanks** to the reviewer from Udacity who reviewed my second submition.
+**Special thanks** to the reviewer from Udacity who reviewed my second submission.
